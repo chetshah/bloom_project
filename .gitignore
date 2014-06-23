@@ -1,0 +1,25 @@
+# Rubymine Project Files
+.DS_Store
+
+# OS Files
+.idea
+.rvmrc
+
+# Log Files etc.
+coverage/
+features_report.html
+tmp/
+log/
+stepdown/
+
+# Vim stuff (get a proper IDE!)
+.*.sw*
+
+# Local bundle
+bin
+vendor
+.bundle
+
+# IntelliJ files
+*.iml
+

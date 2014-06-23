@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="Mercury-RCc2" resourceRoot="" soapui-version="3.6.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="BasicHttpBinding_PlaylistService" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_PlaylistService" soapVersion="1_1" anonymous="optional" definition="http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?wsdl"><con:part><con:url>http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="PlaylistService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd0" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel"/>
+      <xsd:import schemaLocation="http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Itv.BB.Mercury.Common.Types"/>
+      <xsd:import schemaLocation="http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd3" namespace="http://schemas.itv.com/2009/05/Common"/>
+      <xsd:import schemaLocation="http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Itv.BB.Mercury.Common.Domain"/>
+      <xsd:import schemaLocation="http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="PlaylistService_GetPlaylist_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlaylist"/>
+  </wsdl:message>
+  <wsdl:message name="PlaylistService_GetPlaylist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlaylistResponse"/>
+  </wsdl:message>
+  <wsdl:message name="PlaylistService_GetPlaylist_FaultExceptionFault_FaultMessage">
+    <wsdl:part name="detail" element="q1:FaultException" xmlns:q1="http://schemas.datacontract.org/2004/07/System.ServiceModel"/>
+  </wsdl:message>
+  <wsdl:portType name="PlaylistService">
+    <wsdl:operation name="GetPlaylist">
+      <wsdl:input wsaw:Action="http://tempuri.org/PlaylistService/GetPlaylist" message="tns:PlaylistService_GetPlaylist_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/PlaylistService/GetPlaylistResponse" message="tns:PlaylistService_GetPlaylist_OutputMessage"/>
+      <wsdl:fault wsaw:Action="http://tempuri.org/PlaylistService/GetPlaylistFaultExceptionFault" name="FaultExceptionFault" message="tns:PlaylistService_GetPlaylist_FaultExceptionFault_FaultMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_PlaylistService" type="tns:PlaylistService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetPlaylist">
+      <soap:operation soapAction="http://tempuri.org/PlaylistService/GetPlaylist" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultExceptionFault">
+        <soap:fault name="FaultExceptionFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PlaylistService">
+    <wsdl:port name="BasicHttpBinding_PlaylistService" binding="tns:BasicHttpBinding_PlaylistService">
+      <soap:address location="http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd0</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Itv.BB.Mercury.Common.Types"/>
+  <xs:element name="GetPlaylist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="request" type="q1:PlaylistRequest" xmlns:q1="http://schemas.datacontract.org/2004/07/Itv.BB.Mercury.Common.Types"/>
+        <xs:element minOccurs="0" name="userInfo" type="q2:UserInfo" xmlns:q2="http://schemas.datacontract.org/2004/07/Itv.BB.Mercury.Common.Types"/>
+        <xs:element minOccurs="0" name="siteInfo" type="q3:SiteInfo" xmlns:q3="http://schemas.datacontract.org/2004/07/Itv.BB.Mercury.Common.Types"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlaylistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPlaylistResult" nillable="true">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" processContents="lax"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd2</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Itv.BB.Mercury.Common.Types" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Itv.BB.Mercury.Common.Types" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:import schemaLocation="http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:import schemaLocation="http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd3" namespace="http://schemas.itv.com/2009/05/Common"/>
+  <xs:import schemaLocation="http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Itv.BB.Mercury.Common.Domain"/>
+  <xs:complexType name="PlaylistRequest">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RequestGuid" type="ser:guid"/>
+      <xs:element minOccurs="0" name="Vodcrid" type="q1:Vodcrid" xmlns:q1="http://schemas.itv.com/2009/05/Common"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlaylistRequest" nillable="true" type="tns:PlaylistRequest"/>
+  <xs:complexType name="UserInfo">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GeoLocationToken" type="tns:GeoLocationToken"/>
+      <xs:element minOccurs="0" name="RevenueScienceValue" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserInfo" nillable="true" type="tns:UserInfo"/>
+  <xs:complexType name="GeoLocationToken">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Token" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GeoLocationToken" nillable="true" type="tns:GeoLocationToken"/>
+  <xs:complexType name="SiteInfo">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdvertisingRestriction" type="q2:AdvertisingRestriction" xmlns:q2="http://schemas.datacontract.org/2004/07/Itv.BB.Mercury.Common.Domain"/>
+      <xs:element minOccurs="0" name="AdvertisingSite" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Platform" type="tns:Platform"/>
+      <xs:element minOccurs="0" name="Site" type="tns:Site"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SiteInfo" nillable="true" type="tns:SiteInfo"/>
+  <xs:simpleType name="Platform">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None"/>
+      <xs:enumeration value="DotCom"/>
+      <xs:enumeration value="Freesat"/>
+      <xs:enumeration value="PS3"/>
+      <xs:enumeration value="YouView"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Platform" nillable="true" type="tns:Platform"/>
+  <xs:simpleType name="Site">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ItvCom"/>
+      <xs:enumeration value="Utv"/>
+      <xs:enumeration value="Stv"/>
+      <xs:enumeration value="Channel"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Site" nillable="true" type="tns:Site"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd1</con:url><con:content><![CDATA[<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+  <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+  <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+  <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+  <xs:element name="byte" nillable="true" type="xs:byte"/>
+  <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+  <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+  <xs:element name="double" nillable="true" type="xs:double"/>
+  <xs:element name="float" nillable="true" type="xs:float"/>
+  <xs:element name="int" nillable="true" type="xs:int"/>
+  <xs:element name="long" nillable="true" type="xs:long"/>
+  <xs:element name="QName" nillable="true" type="xs:QName"/>
+  <xs:element name="short" nillable="true" type="xs:short"/>
+  <xs:element name="string" nillable="true" type="xs:string"/>
+  <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+  <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+  <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+  <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+  <xs:element name="char" nillable="true" type="tns:char"/>
+  <xs:simpleType name="char">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:element name="duration" nillable="true" type="tns:duration"/>
+  <xs:simpleType name="duration">
+    <xs:restriction base="xs:duration">
+      <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+      <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+      <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="guid" nillable="true" type="tns:guid"/>
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attribute name="FactoryType" type="xs:QName"/>
+  <xs:attribute name="Id" type="xs:ID"/>
+  <xs:attribute name="Ref" type="xs:IDREF"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd3</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.itv.com/2009/05/Common" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.itv.com/2009/05/Common">
+  <xs:import schemaLocation="http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:complexType name="Vodcrid">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Partition" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Vodcrid" nillable="true" type="tns:Vodcrid"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd4</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Itv.BB.Mercury.Common.Domain" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Itv.BB.Mercury.Common.Domain">
+  <xs:simpleType name="AdvertisingRestriction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None"/>
+      <xs:enumeration value="Kids"/>
+      <xs:enumeration value="Youth"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AdvertisingRestriction" nillable="true" type="tns:AdvertisingRestriction"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd5</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.ServiceModel" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/System.ServiceModel">
+  <xs:import schemaLocation="http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System"/>
+  <xs:complexType name="FaultException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CommunicationException"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FaultException" nillable="true" type="tns:FaultException"/>
+  <xs:complexType name="CommunicationException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="q1:SystemException" xmlns:q1="http://schemas.datacontract.org/2004/07/System"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CommunicationException" nillable="true" type="tns:CommunicationException"/>
+  <xs:complexType name="FaultException.FaultCodeData">
+    <xs:sequence>
+      <xs:element name="name" nillable="true" type="xs:string"/>
+      <xs:element name="ns" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FaultException.FaultCodeData" nillable="true" type="tns:FaultException.FaultCodeData"/>
+  <xs:complexType name="ArrayOfFaultException.FaultReasonData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FaultException.FaultReasonData" nillable="true" type="tns:FaultException.FaultReasonData"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFaultException.FaultReasonData" nillable="true" type="tns:ArrayOfFaultException.FaultReasonData"/>
+  <xs:complexType name="FaultException.FaultReasonData">
+    <xs:sequence>
+      <xs:element name="text" nillable="true" type="xs:string"/>
+      <xs:element name="xmlLang" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FaultException.FaultReasonData" nillable="true" type="tns:FaultException.FaultReasonData"/>
+  <xs:complexType name="ArrayOfFaultException.FaultCodeData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FaultException.FaultCodeData" nillable="true" type="tns:FaultException.FaultCodeData"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFaultException.FaultCodeData" nillable="true" type="tns:ArrayOfFaultException.FaultCodeData"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd6</con:url><con:content><![CDATA[<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/System" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/">
+  <xs:import schemaLocation="http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+  <xs:complexType name="SystemException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Exception"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SystemException" nillable="true" type="tns:SystemException"/>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:any minOccurs="0" maxOccurs="unbounded" namespace="##local" processContents="skip"/>
+    </xs:sequence>
+    <xs:attribute ref="ser:FactoryType"/>
+  </xs:complexType>
+  <xs:element name="Exception" nillable="true" type="tns:Exception"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://tempuri.org/PlaylistService/GetPlaylist" name="GetPlaylist" bindingOperationName="GetPlaylist" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="PS3"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:itv="http://schemas.datacontract.org/2004/07/Itv.BB.Mercury.Common.Types" xmlns:com="http://schemas.itv.com/2009/05/Common">
+
+   <soapenv:Header/>
+
+   <soapenv:Body>
+
+      <tem:GetPlaylist>
+
+         <!--Optional:-->
+
+         <tem:request>
+
+            <!--Optional:-->
+
+            <itv:RequestGuid>7FA847EC-905C-41EA-BCF7-CC9E44A00CE4</itv:RequestGuid>
+
+            <!--Optional:-->
+
+            <itv:Vodcrid>
+
+               <!--Optional:-->
+
+               <com:Id>203393</com:Id>
+
+               <!--Optional:-->
+
+               <com:Partition>itv.com</com:Partition>
+
+               <!--Optional:-->
+
+               <com:Value></com:Value>
+
+            </itv:Vodcrid>
+
+         </tem:request>
+
+         <!--Optional:-->
+
+         <tem:userInfo>
+
+            <!--Optional:-->
+
+            <itv:GeoLocationToken>
+
+               <!--Optional:-->
+
+               <itv:Token>?</itv:Token>
+
+            </itv:GeoLocationToken>
+
+            <!--Optional:-->
+
+            <itv:RevenueScienceValue>?</itv:RevenueScienceValue>
+
+         </tem:userInfo>
+
+         <!--Optional:-->
+
+         <tem:siteInfo>
+
+	    <!--Optional:-->
+	    
+	    <itv:AdvertisingRestriction>None</itv:AdvertisingRestriction>	  
+	    
+	    <!--Optional:-->
+	    
+	    
+            <!--Optional:-->
+
+            <itv:Area>ITVPLAYER</itv:Area>
+
+            <!--Optional:-->
+
+            <itv:Platform>PS3</itv:Platform>
+
+            <!--Optional:-->
+
+            <itv:Site>ItvCom</itv:Site>
+
+         </tem:siteInfo>
+
+      </tem:GetPlaylist>
+
+   </soapenv:Body>
+
+</soapenv:Envelope>
+
+]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/PlaylistService/GetPlaylist"/><con:wsrmConfig version="1.2"/></con:call><con:call name="DotCom"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:itv="http://schemas.datacontract.org/2004/07/Itv.BB.Mercury.Common.Types" xmlns:com="http://schemas.itv.com/2009/05/Common">
+
+   <soapenv:Header/>
+
+   <soapenv:Body>
+
+      <tem:GetPlaylist>
+
+         <!--Optional:-->
+
+         <tem:request>
+
+            <!--Optional:-->
+
+            <itv:RequestGuid>7FA847EC-905C-41EA-BCF7-CC9E44A00CE4</itv:RequestGuid>
+
+            <!--Optional:-->
+
+            <itv:Vodcrid>
+
+               <!--Optional:-->
+
+               <com:Id>203393</com:Id>
+
+               <!--Optional:-->
+
+               <com:Partition>itv.com</com:Partition>
+
+               <!--Optional:-->
+
+               <com:Value></com:Value>
+
+            </itv:Vodcrid>
+
+         </tem:request>
+
+         <!--Optional:-->
+
+         <tem:userInfo>
+
+            <!--Optional:-->
+
+            <itv:GeoLocationToken>
+
+               <!--Optional:-->
+
+               <itv:Token>?</itv:Token>
+
+            </itv:GeoLocationToken>
+
+            <!--Optional:-->
+
+            <itv:RevenueScienceValue>?</itv:RevenueScienceValue>
+
+         </tem:userInfo>
+
+         <!--Optional:-->
+
+         <tem:siteInfo>
+
+	    <!--Optional:-->
+	    
+	    <itv:AdvertisingRestriction>None</itv:AdvertisingRestriction>	  
+	    
+	    <!--Optional:-->
+	    
+	    
+            <!--Optional:-->
+
+            <itv:Area>ITVPLAYER</itv:Area>
+
+            <!--Optional:-->
+
+            <itv:Platform>DotCom</itv:Platform>
+
+            <!--Optional:-->
+
+            <itv:Site>ItvCom</itv:Site>
+
+         </tem:siteInfo>
+
+      </tem:GetPlaylist>
+
+   </soapenv:Body>
+
+</soapenv:Envelope>
+
+]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/PlaylistService/GetPlaylist"/><con:wsrmConfig version="1.2"/></con:call><con:call name="YouView"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:itv="http://schemas.datacontract.org/2004/07/Itv.BB.Mercury.Common.Types" xmlns:com="http://schemas.itv.com/2009/05/Common">
+  <soapenv:Header/>
+   <soapenv:Body>
+      <tem:GetPlaylist>
+         <!--Optional:-->
+         <tem:request>
+            <!--Optional:-->
+            <itv:RequestGuid>7FA847EC-905C-41EA-BCF7-CC9E44A00CE4</itv:RequestGuid>
+            <!--Optional:-->
+            <itv:Vodcrid>
+               <!--Optional:-->
+               <com:Id>203393</com:Id>
+               <!--Optional:-->
+               <com:Partition>itv.com</com:Partition>
+               <!--Optional:-->
+               <com:Value></com:Value>
+            </itv:Vodcrid>
+         </tem:request>
+         <!--Optional:-->
+         <tem:userInfo>
+            <!--Optional:-->
+            <itv:GeoLocationToken>
+               <!--Optional:-->
+               <itv:Token>?</itv:Token>
+            </itv:GeoLocationToken>
+            <!--Optional:-->
+            <itv:RevenueScienceValue>?</itv:RevenueScienceValue>
+         </tem:userInfo>
+         <!--Optional:-->
+         <tem:siteInfo>
+	    <!--Optional:-->
+	    <itv:AdvertSize>test</itv:AdvertSize>
+           <!--Optional:-->
+	    <itv:AdvertisingRestriction>Kids</itv:AdvertisingRestriction>	  
+	    <!--Optional:-->
+            <itv:Area>ITVPLAYER</itv:Area>
+            <!--Optional:-->
+            <itv:Platform>YouView</itv:Platform>
+            <!--Optional:-->
+            <itv:Site>ItvCom</itv:Site>
+         </tem:siteInfo>
+      </tem:GetPlaylist>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/PlaylistService/GetPlaylist"/><con:wsrmConfig version="1.2"/></con:call><con:call name="Mobile"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://g22msrc217.itvbbrc2.ads:8095/PlaylistService.svc</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/" xmlns:itv="http://schemas.datacontract.org/2004/07/Itv.BB.Mercury.Common.Types" xmlns:com="http://schemas.itv.com/2009/05/Common">
+
+   <soapenv:Header/>
+
+   <soapenv:Body>
+
+      <tem:GetPlaylist>
+
+         <!--Optional:-->
+
+         <tem:request>
+
+            <!--Optional:-->
+
+            <itv:RequestGuid>7FA847EC-905C-41EA-BCF7-CC9E44A00CE4</itv:RequestGuid>
+
+            <!--Optional:-->
+
+            <itv:Vodcrid>
+
+               <!--Optional:-->
+
+               <com:Id>203401</com:Id>
+
+               <!--Optional:-->
+
+               <com:Partition>itv.com</com:Partition>
+
+               <!--Optional:-->
+
+               <com:Value></com:Value>
+
+            </itv:Vodcrid>
+
+         </tem:request>
+
+         <!--Optional:-->
+
+         <tem:userInfo>
+
+              <itv:Broadcaster>NA</itv:Broadcaster>
+
+            <!--Optional:-->
+
+            <itv:GeoLocationToken>
+
+               <!--Optional:-->
+
+               <itv:Token>?</itv:Token>
+
+            </itv:GeoLocationToken>
+
+            <!--Optional:-->
+
+            <itv:RevenueScienceValue>?</itv:RevenueScienceValue> 
+
+         </tem:userInfo>
+
+         <!--Optional:-->
+
+         <tem:siteInfo>
+
+            <!--Optional:-->
+
+            <!--Optional:-->
+
+            <itv:Area>ITVPLAYER</itv:Area>
+
+            <!--Optional:-->
+
+            <itv:Platform>Mobile</itv:Platform>
+
+            <!--Optional:-->
+
+            <itv:Site>ItvCom</itv:Site>
+
+         </tem:siteInfo>
+
+            <tem:deviceInfo>
+
+           <!--    <itv:DeliveryTypes> // not yet implemented
+
+                        <itv:DeliveryType>Http</itv:DeliveryType>
+
+                        <itv:DeliveryType>Rtmpe</itv:DeliveryType>
+
+               </itv:DeliveryTypes> -->
+
+               <itv:ScreenSize>Small</itv:ScreenSize>
+
+            </tem:deviceInfo>
+
+      </tem:GetPlaylist>
+
+   </soapenv:Body>
+
+</soapenv:Envelope>
+]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/PlaylistService/GetPlaylist"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>
